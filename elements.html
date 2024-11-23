@@ -4,35 +4,120 @@
     <meta charset="UTF-8" />
     <title>elements</title>
     <style>
+      /* استایل برای بخش‌های پارالاکس */
+      #parallax1,
+      #parallax2,
+      #parallax3,
+      #parallax4,
+      #parallax5,
+      #parallax6,
+      #parallax7,
+      #parallax8,
+      #parallax9,
+      #parallax10 {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* ارتفاع به اندازه صفحه نمایش (فول اسکرین) */
+        background-attachment: fixed; /* ثابت کردن پس‌زمینه */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; /* اندازه پس‌زمینه مطابق با اندازه صفحه */
+      }
+
+      #parallax1 {
+        background-image: url("/photos/evening.jpg"); /* تصویر اول */
+      }
+
+      #parallax2 {
+        background-image: url("/photos/evening\ 2.jpg"); /* تصویر دوم */
+      }
+
+      #parallax3 {
+        background-image: url("/photos/evening\ 3.png"); /* تصویر سوم */
+      }
+      #parallax4 {
+        background-image: url("/photos/evening\ 2.jpg"); /* تصویر اول */
+      }
+
+      #parallax5 {
+        background-image: url("/photos/evening\ 5.jpg"); /* تصویر دوم */
+      }
+
+      #parallax6 {
+        background-image: url("/photos/evening\ 6.jpg"); /* تصویر سوم */
+      }
+      #parallax7 {
+        background-image: url("/photos/evening\ 7.jpg"); /* تصویر سوم */
+      }
+      #parallax8 {
+        background-image: url("/photos/evening\ 8.jpg"); /* تصویر سوم */
+      }
+      #parallax9 {
+        background-image: url("/photos/evening\ 9.jpg"); /* تصویر سوم */
+      }
+      #parallax10 {
+        background-image: url("/photos/evening\ 2.jpg"); /* تصویر سوم */
+      }
       .textcolor {
         border: 2px #d581d7 solid;
         border-radius: 4px;
-        background-color: rgb(151, 118, 211);
-        height: 200px;
+        background-color: #bf98ae;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+        font-size: 30px;
+        color: #401247;
+        padding: 60px;
       }
+
       mark {
         border: 2px solid rgb(245, 156, 156);
         border-radius: 10px;
         background-color: #6cffff;
       }
+
       .title1 {
-        color: #ec9e55;
+        color: #d3ab87;
       }
+      @font-face {
+        font-family: "as";
+        src: url(/font/Shabnam-Bold-FD.woff2);
+      }
+
       body {
-        font-family: b yekan;
-        background-color: #210312ec;
+        font-family: "as";
+        src: url(/font/Vazir.woff);
+        background-color: #3a1d4b;
+        background-size: 100%;
+        background-attachment: fixed;
         color: #240116;
+        margin: 0;
+        padding: 0;
       }
+      h1 {
+        display: flex; /* فعال کردن Flexbox */
+        justify-content: center; /* مرکز افقی */
+        align-items: center; /* مرکز عمودی */
+        height: 100vh; /* ارتفاع عنصر به اندازه کل صفحه */
+        width: 100%; /* عرض عنصر به اندازه کل صفحه */
+      }
+
       .s1 {
         text-decoration: none;
       }
+
       img {
         width: 30px;
       }
+
       .Gallery {
         display: flex;
         gap: 4px;
+        justify-content: center;
+        margin-top: 20px;
       }
+
       .Card {
         position: relative;
         left: 0px;
@@ -44,18 +129,23 @@
         transition: 0.4s ease-in-out;
         flex: 1px;
       }
+
       .Card:nth-child(1) {
         background-color: #b881ff;
       }
+
       .Card:nth-child(2) {
         background-color: #ff9950;
       }
+
       .Card:nth-child(3) {
         background-color: #ed6a5e;
       }
+
       .Card:nth-child(4) {
         background-color: #aaec8a;
       }
+
       .Card:hover {
         flex: 3;
         font-weight: bold;
@@ -63,39 +153,47 @@
       }
     </style>
   </head>
-  <body>
-    <div class="Gallery">
-      <a class="s1 Card" href="index.html">
-        <ul>
-          <li>
-            <img src="home.png" alt="" />
-          </li>
-        </ul>
-      </a>
 
-      <a class="s1 Card" href="network.html">
-        <ul>
-          <li>
-            <img src="history.png" alt="" />
-          </li>
-        </ul>
-      </a>
-      <a class="s1 Card" href="elements.html">
-        <ul>
-          <li><img src="element.png" alt="" /></li>
-        </ul>
-      </a>
-      <a class="s1 Card" href="about.html">
-        <ul>
-          <li>
-            <img src="about.png" alt="" />
-          </li>
-        </ul>
-      </a>
+  <body>
+    <!-- بخش پارالاکس 1 -->
+    <div id="parallax1">
+      <!-- گالری و کارت‌ها در بالای صفحه -->
+      <div class="Gallery">
+        <a class="s1 Card" href="index.html">
+          <ul>
+            <li>
+              <img src="home.png" alt="" />
+            </li>
+          </ul>
+        </a>
+
+        <a class="s1 Card" href="network.html">
+          <ul>
+            <li>
+              <img src="history.png" alt="" />
+            </li>
+          </ul>
+        </a>
+        <a class="s1 Card" href="elements.html">
+          <ul>
+            <li><img src="element.png" alt="" /></li>
+          </ul>
+        </a>
+        <a class="s1 Card" href="about.html">
+          <ul>
+            <li>
+              <img src="about.png" alt="" />
+            </li>
+          </ul>
+        </a>
+      </div>
+      <div class="title1">
+        <h1 style="font-size: 50px">تگ های تیتر یا Heading در HTML</h1>
+      </div>
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
     </div>
-    <div class="title1">
-      <h1 style="font-size: 20px">تگ های تیتر یا Heading در HTML</h1>
-    </div>
+
+    <!-- متن‌ها -->
     <p class="textcolor">
       عناوین یا تیترها یا به انگلیسی Headings از مهمترین تگ ها در حوزه سئو در یک
       صفحه ی HTML می باشد، در واقع میشه گفت مهمترین بخش یک صفحه ی HTML برای بحث
@@ -105,123 +203,123 @@
       ارزش مکانی و در مقابل تگ H6 دارای کمترین ارزش مکانی در یک صفحه ی وب HTML
       می باشد.
     </p>
-    <br />
-    <hr />
-    <hr />
-    <br />
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ P در HTML
+
+    <!-- بخش پارالاکس 2 -->
+    <div id="parallax2">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ P در HTML</h1>
+      </div>
     </div>
+
     <p class="textcolor">
-      تگ p که از کلمه Paragraph گرفته شده، همونطور که از اسمش مشخصه ، تگی است که
-      با استفاده از آن میتوان در یک صفحه وب یک یا چندین پاراگراف را ایجاد کرد.
+      تگ p که از کلمه Paragraph گرفته شده است ، همانطور که از اسمش مشخصه ، تگی
+      است که با استفاده از آن میتوان در یک صفحه وب یک یا چندین پاراگراف را ایجاد
+      کرد.
     </p>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ ul چیست؟
+
+    <!-- بخش پارالاکس 3 -->
+    <div id="parallax3">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ ul چیست؟</h1>
+      </div>
     </div>
+
     <p class="textcolor">
       کلمه ul مخفف UnOrdered List می باشد که به معنی لیست نامرتب می باشد.
     </p>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ ol چیست؟
-    </div>
-    <div>
-      <p class="textcolor">
-        متن هایی که در تگ ol قرار می گیرند، دارای شماره گذاری هستند، یعنی ترتیب
-        آیتم ها در آن اهمیت دارد.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ های فرمت دهی در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        در طراحی صفحات وب، وظیفه گروهی از تگ های HTML فرمت دهی و تعیین شکل نمایش
-        متون ( مثلا ضخیم و bold بودن و یا مورب و …) میباشد در این مقاله آموزشی،
-        با این گروه از تگها (formatting tags) آشنا خواهید شد:
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      کامنت گذاشتن در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        کامنت ها به نوشته هایی گفته میشود که معمولا برای توضیح ، در قسمتی از
-        سورس کد های HTML قرار میگیرد و به برنامه نویس کمک میکنند. کامنت ها در
-        خروجی مرورگر نمایش داده نمیشوند بنابراین کامنت ها در صفحه وب قابل مشاهده
-        نیستند.با استفاده از تگ !– … – در HTML می توان کامنت های مورد نظرتان را
-        به سند HTML اضافه کنید.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Link در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ link یکی از تگ های پراستفاده در قسمت هد ( Head ) یک صفحه وب می باشد،
-        تگی است که با استفاده از آن میتوان فایل های CSS خارجی رو وارد صفحه کرد.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      آموزش تگ img در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ img همونطور که از اسمش مشخصه از کلمه ( Image ) گرفته شده است، تگی است
-        که با استفاده از آن میتوان تصویر / عکس را در یک صفحه وب قرار داد.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Picture در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ picture تگی است همانند یک کانتینر ( Container ) یا یک ظرف برای
-        نگهداری ۱ یا چندین عکس ، که با استفاده از آن میتوان یک یا چندین عکس رو
-        در اندازه های مختلف صفحه نمایش به نمایش گذاشت.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Table در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ table همونطور که از اسمشم مشخصه تگی است که با استفاده از آن میتوان یک
-        جدول را در یک صفحه وب ایجاد کرد، حال یکسری تگ ها هستن که همگی درون تگ
-        table مورد استفاده قرار میگیرند که این تگ ها عبارتند از :
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Video در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ video که دیگه از اسمش مشخصه چیه! تگی است که با استفاده از آن میتوان
-        یک ویدئو ( کلیپ ، فیلم ) را در یک صفحه وب قرار داد.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Iframe در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ iframe تگی است با استفاده از اون میتونیم به راحتی یک سایت یا یک فایل
-        یا یک تصویر و یا بطور کلی میتوان یک صفحه وب را درون یک صفحه ی وب دیگر
-        قرار داد.
-      </p>
-    </div>
-    <div class="title1" style="font-size: 20px; font-weight: bold">
-      تگ Form در HTML
-    </div>
-    <div>
-      <p class="textcolor">
-        تگ form همونطور که از اسمشم مشخصه با استفاده از اون میتونیم یک یا چندین
-        فرم رو در یک صفحه ی وب ایجاد کنیم. یسری تگ ها هستن که فقط مخصوص استفاده
-        در تگ Form هستن، این تگ ها شامل موارد زیر می باشد :
+    <!-- بخش پارالاکس 4 -->
+    <div id="parallax4">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
 
-        <br />input <br />textarea <br />select <br />fieldset <br />label
-        <br />button <br />option <br />optgroup <br />output <br />datalist
-      </p>
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ ol چیست؟</h1>
+      </div>
     </div>
+    <p class="textcolor">
+      متن هایی که در تگ ol قرار می گیرند، دارای شماره گذاری هستند، یعنی ترتیب
+      آیتم ها در آن اهمیت دارد.
+    </p>
+
+    <!-- بخش پارالاکس 5 -->
+    <div id="parallax5">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">
+          تگ های فرمت دهی در HTML
+        </h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      در طراحی صفحات وب، وظیفه گروهی از تگ های HTML فرمت دهی و تعیین شکل نمایش
+      متون ( مثلا ضخیم و bold بودن و یا مورب و …) میباشد در این مقاله آموزشی، با
+      این گروه از تگها (formatting tags) آشنا خواهید شد:
+    </p>
+    <!-- بخش پارالاکس 6 -->
+    <div id="parallax6">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">کامنت گذاشتن در HTML</h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      کامنت ها به نوشته هایی گفته میشود که معمولا برای توضیح ، در قسمتی از سورس
+      کد های HTML قرار میگیرد و به برنامه نویس کمک میکنند. کامنت ها در خروجی
+      مرورگر نمایش داده نمیشوند بنابراین کامنت ها در صفحه وب قابل مشاهده نیستند.
+      با استفاده از تگ !– … – در HTML می توان کامنت های مورد نظرتان را به سند
+      HTML اضافه کنید.
+    </p>
+    <!-- بخش پارالاکس 7 -->
+    <div id="parallax7">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ Link در HTML</h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      تگ link یکی از تگ های پراستفاده در قسمت هد ( Head ) یک صفحه وب می باشد،
+      تگی است که با استفاده از آن میتوان فایل های CSS خارجی رو وارد صفحه کرد.
+    </p>
+    <!-- بخش پارالاکس 8 -->
+    <div id="parallax8">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">آموزش تگ img در HTML</h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      تگ img همونطور که از اسمش مشخصه از کلمه ( Image ) گرفته شده است، تگی است
+      که با استفاده از آن میتوان تصویر / عکس را در یک صفحه وب قرار داد.
+    </p>
+    <!-- بخش پارالاکس 9 -->
+    <div id="parallax9">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ Picture در HTML</h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      تگ picture تگی است همانند یک کانتینر ( Container ) یا یک ظرف برای نگهداری
+      ۱ یا چندین عکس ، که با استفاده از آن میتوان یک یا چندین عکس رو در اندازه
+      های مختلف صفحه نمایش به نمایش گذاشت.
+    </p>
+    <!-- بخش پارالاکس 10 -->
+    <div id="parallax10">
+      <!-- پس‌زمینه ثابت و فول اسکرین -->
+
+      <div class="title1">
+        <h1 style="font-size: 50px; font-weight: bold">تگ Table در HTML</h1>
+      </div>
+    </div>
+    <p class="textcolor">
+      تگ table همونطور که از اسمشم مشخصه، برای ساخت جدول استفاده میشه و در واقع
+      می توانیم با استفاده از آن داده ها را به شکل جدول در صفحه نمایش دهیم.
+    </p>
   </body>
 </html>
