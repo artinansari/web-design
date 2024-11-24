@@ -1,0 +1,143 @@
+      /* استایل برای بخش‌های پارالاکس */
+      #parallax1,
+      #parallax2,
+      #parallax3,
+      #parallax4,
+      #parallax5,
+      #parallax6,
+      #parallax7,
+      #parallax8,
+      #parallax9,
+      #parallax10 {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* ارتفاع به اندازه صفحه نمایش (فول اسکرین) */
+        background-attachment: fixed; /* ثابت کردن پس‌زمینه */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; /* اندازه پس‌زمینه مطابق با اندازه صفحه */
+      }
+
+      #parallax1 {
+        background-image: url("/photos/evening.jpg");
+      }
+      #parallax2 {
+        background-image: url("/photos/evening 2.jpg");
+      }
+      #parallax3 {
+        background-image: url("/photos/evening 3.png");
+      }
+      #parallax4 {
+        background-image: url("/photos/evening 2.jpg");
+      }
+      #parallax5 {
+        background-image: url("/photos/evening 5.jpg");
+      }
+      #parallax6 {
+        background-image: url("/photos/evening 6.jpg");
+      }
+      #parallax7 {
+        background-image: url("/photos/evening 7.jpg");
+      }
+      #parallax8 {
+        background-image: url("/photos/evening 5.jpg");
+      }
+      #parallax9 {
+        background-image: url("/photos/evening 9.jpg");
+      }
+      #parallax10 {
+        background-image: url("/photos/evening 2.jpg");
+      }
+
+      .textcolor {
+        border: 2px #d581d7 solid;
+        border-radius: 4px;
+        background-color: #bf98ae;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+        font-size: 30px;
+        color: #401247;
+        padding: 60px;
+      }
+
+      mark {
+        border: 2px solid rgb(245, 156, 156);
+        border-radius: 10px;
+        background-color: #6cffff;
+      }
+
+      .title1 {
+        color: #d3ab87;
+      }
+
+      @font-face {
+        font-family: "as";
+        src: url(/font/Shabnam-Bold-FD.woff2);
+      }
+
+      body {
+        font-family: "as";
+        src: url(/font/Vazir.woff);
+        background-color: #3a1d4b;
+        background-size: 100%;
+        background-attachment: fixed;
+        color: #240116;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .s1 {
+        text-decoration: none;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      .Gallery {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .Card {
+        position: relative;
+        left: 0px;
+        width: 80px;
+        border-radius: 4px;
+        padding: 8px;
+        height: 50px;
+        background-color: white;
+        transition: 0.4s ease-in-out;
+        flex: 1px;
+      }
+
+      .Card:nth-child(1) {
+        background-color: #b881ff;
+      }
+      .Card:nth-child(2) {
+        background-color: #ff9950;
+      }
+      .Card:nth-child(3) {
+        background-color: #ed6a5e;
+      }
+      .Card:nth-child(4) {
+        background-color: #aaec8a;
+      }
+
+      .Card:hover {
+        flex: 3;
+        font-weight: bold;
+        cursor: pointer;
+      }

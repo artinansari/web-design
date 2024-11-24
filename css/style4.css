@@ -1,0 +1,51 @@
+.textcolor {
+    color: #b881ff;
+  }
+  body {
+    font-family: impact;
+    background-image: url(/photos/evening\ 2.jpg);
+    color: #240116;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  dd {
+    font-size: 30px;
+    color: #f1a044;
+  }
+  img {
+    width: 30px;
+  }
+  .Gallery {
+    display: flex;
+    gap: 4px;
+  }
+  .Card {
+    position: relative;
+    left: 0px;
+    width: 80px;
+    border-radius: 4px;
+    padding: 8px;
+    height: 50px;
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    flex: 1px;
+  }
+  .Card:nth-child(1) {
+    background-color: #b881ff;
+  }
+  .Card:nth-child(2) {
+    background-color: #ff9950;
+  }
+  .Card:nth-child(3) {
+    background-color: #ed6a5e;
+  }
+  .Card:nth-child(4) {
+    background-color: #aaec8a;
+  }
+  .Card:hover {
+    flex: 3;
+    font-weight: bold;
+    cursor: pointer;
+  }
